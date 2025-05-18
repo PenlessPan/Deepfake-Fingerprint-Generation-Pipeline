@@ -2,12 +2,12 @@
 
 This repository contains an open-source implementation of an end-to-end **deepfake fingerprint generation pipeline**. It allows researchers to generate synthetic (spoofed) fingerprint images from stolen minutiae templates and materialize them as physical silicone replicas for evaluating real-world biometric spoofing attacks.
 
-> 📢 This work was published at **WDC '25 – The 4th Workshop on Security Implications of Deepfakes and Cheapfakes**.  
+> This work was published at **WDC '25 – The 4th Workshop on Security Implications of Deepfakes and Cheapfakes**.  
 > Authors: Yaniv Hacmon, Keren Gorelik, Yisroel Mirsky
 
 ---
 
-## 💡 Overview
+## Overview
 
 Biometric templates, particularly fingerprint minutiae maps, are often considered safe due to their abstract format. This repository challenges that assumption by providing:
 
@@ -19,7 +19,7 @@ Biometric templates, particularly fingerprint minutiae maps, are often considere
 
 ---
 
-## 🧪 Use Cases
+## Use Cases
 
 - Research in biometric spoofing and anti-spoofing defenses.
 - Security audits for fingerprint-based authentication systems.
