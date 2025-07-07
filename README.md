@@ -258,6 +258,8 @@ Special thanks to Yazan Abbas and Luai Okasha for their contributions to the fin
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+Note: The embedded pytorch-CycleGAN-and-pix2pix directory contains code licensed under BSD 2-Clause License.
+
 ## Ethical Considerations
 
 This research is intended to:
