@@ -47,7 +47,6 @@ chmod +x nfiq mindtct
 ```
 
 **For other platforms**: Try the provided executables first. If they don't work on your system, download and compile the tools from NIST:
-- **NFIQ**: https://www.nist.gov/services-resources/software/nfiq  
 - **NBIS**: https://www.nist.gov/services-resources/software/nist-biometric-image-software-nbis
 
 Place the executables in `preprocessing/external_tools/` and update paths in `preprocessing/config.py` if needed.
