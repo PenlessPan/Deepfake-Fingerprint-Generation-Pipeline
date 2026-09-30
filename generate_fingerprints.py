@@ -39,7 +39,7 @@ class SimpleOptions:
         # Required paths
         self.dataroot = input_dir
         self.checkpoints_dir = os.path.dirname(model_path)
-        self.name = os.path.splitext(os.path.basename(model_path))[0]
+        self.name = os.path.basename(model_path)
         
         # Model configuration (based on your command)
         self.model = 'test'
@@ -48,10 +48,19 @@ class SimpleOptions:
         self.no_dropout = True
         self.output_nc = 1
         self.input_nc = 3  # Template images are RGB
-        
+        self.ngf = 64
+
+        # for training-related parameters (not used in test)
+        self.ndf = 64  # Number of discriminator filters in the first conv layer
+        self.netD = 'basic'  # Discriminator architecture
+        self.n_layers_D = 3  # Only used if netD == 'n_layers'
+        # self.norm = 'instance'  # Normalization type
+        self.no_dropout = False  # Dropout for the generator
+
         # Default settings
         self.phase = 'test'
         self.dataset_mode = 'single'
+        self.direction = 'AtoB'
         self.load_iter = 0
         self.epoch = 'latest'
         self.verbose = False
@@ -74,7 +83,8 @@ class SimpleOptions:
         self.max_dataset_size = float('inf')
         self.preprocess = 'none'
         self.eval = False
-        
+        self.model_suffix = ''
+
         # Ensure model file exists with correct name
         expected_model_file = os.path.join(self.checkpoints_dir, f'{self.epoch}_net_G.pth')
         if not os.path.exists(expected_model_file):

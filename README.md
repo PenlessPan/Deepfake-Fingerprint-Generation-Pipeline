@@ -37,6 +37,8 @@ cd Deepfake-Fingerprint-Generation-Pipeline
 pip install -r requirements.txt
 ```
 
+**Note on PyTorch/torchvision versions**: `requirements.txt` only pins lower bounds, but `torch` and `torchvision` must be a matching pair — an incompatible combination fails at import time with `RuntimeError: operator torchvision::nms does not exist`. If you hit that, install a matched pair for your CUDA version from https://pytorch.org/get-started/locally/ (e.g. `torch==2.2.2` with `torchvision==0.17.2`).
+
 ### External Tools Setup
 
 The pipeline requires NIST tools for fingerprint processing. Pre-compiled binaries for Rocky Linux 9.5 are included:
